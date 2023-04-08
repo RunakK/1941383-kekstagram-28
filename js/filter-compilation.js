@@ -10,7 +10,6 @@ const randomPictures = (data) => data.sort(() => Math.random() - 0.5).slice(0, P
 
 const sortDescending = (data, key) => data.sort((user1, user2) => user2[key] > user1[key] ? 1 : -1);
 
-
 const chooseFilter = (filterType) => {
   filterDefault.classList.remove('img-filters__button--active');
   filterDiscussed.classList.remove('img-filters__button--active');
@@ -38,6 +37,5 @@ const getDiscussedPhoto = (cb) => {
     cb();
   });
 };
-
 
 export {imgFilters,getRandomPhoto, randomPictures, getDefaultPhoto, sortDescending, getDiscussedPhoto};
